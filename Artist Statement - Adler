@@ -1,0 +1,17 @@
+          My project 2 consists of an assortment of different techniques and deliberate choices. I wanted to create a sort of pong effect, like have shapes
+bounce off the walls. On top of this, I really wanted to make some sort of staircase kind of look. I was inspired by the staircases in Squid Games,
+which I believe are actually based off another art piece.
+         To achieve this, I knew I had to have my shapes constantly moving. From a previous coding class, we learned how to use different speed 
+variables(dx and dy) to increment the x and y values constantly so every shape redrawn would give the appearance as if it was moving. I applied 
+this same logic with my piece, and told the computer that whenever an x or y value reached the edge of the canvas, just multiply the speed variable 
+by -1 to change the direction to give the appearance that it was bouncing off the wall. I deliberately choose not to redraw the background after each 
+rectangle was drawn, so every rectangle left a trail that looked like a staircase. 
+         The random choices are shown at the very start. Overall, the starting position of the rectangles(the X and Y), the length/width, the speeds,
+and color choice, are all random. Basically, I made an array to fill each slot with different random information that corresponds to a specific rectangle.
+Pretty much each slot, like rects[3], for example, acts as an object, and within rects[3], there’s a random X value called x - so I could just 
+use rects[3].x to tell the computer where to put the starting x value. This same idea applies to all other pieces of information stored
+within their rects[] spot. I also included a random color number, and later on when drawing, did a simple if statement and if that
+rectangle got a specific number in that random call, then it would be filled with this specific color. Like if the random number was 1, then 
+draw pink, if it was 2, draw blue, etc.
+	     The for loops were used well too! The first one was used to create those 30 slots in the rects array with random information values. The
+second for loop was used to go through every single slot in rects, grab the infomation, adjust the x/y values via dx or dy, and draw the rect.
